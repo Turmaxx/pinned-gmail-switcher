@@ -25,7 +25,8 @@
     "default_title": "Gmail",
     "default_area": "navbar",
     "default_icon": {
-      "48": "icons/gmail-icon.svg"
+      "48": "icons/browser-icon.png",
+      "128": "icons/firefox-addons-icon.png"
     }
   },
   "background": {
