@@ -2,7 +2,7 @@ let previousTab = null;
 
 function createPinnedTab() {
   return browser.tabs.create({
-    url: "https://mail.google.com/mail/u/0/",
+    url: "https://mail.google.com/",
     pinned: true,
     active: true
   });
