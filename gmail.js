@@ -1,5 +1,11 @@
 let previousTab = null;
 
+browser.tabs.onRemoved.addListener((tabId) => {
+  if (tabId === previousTab) {
+    previousTab = null;
+  }
+});
+
 function createPinnedTab() {
   return browser.tabs.create({
     url: "https://mail.google.com/",
