@@ -25,11 +25,15 @@ async function handleClick(tab) {
 
   if (gmailTabId === currentTabId) {
     if (previousTab !== null) {
-      browser.tabs.update(previousTab, { active: true });
+      try {
+        await browser.tabs.update(previousTab, { active: true });
+      } catch {
+        previousTab = null;
+      }
     }
   } else {
     previousTab = currentTabId;
-    browser.tabs.update(gmailTabId, { active: true });
+    await browser.tabs.update(gmailTabId, { active: true });
   }
 }
 
